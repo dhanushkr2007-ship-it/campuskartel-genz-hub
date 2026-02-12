@@ -8,6 +8,8 @@ export interface Mentor {
   rating: number;
   totalRatings: number;
   avatar: string;
+  profileImage: string;
+  gender: "male" | "female";
   bio: string;
   tags: string[];
 }
@@ -23,6 +25,8 @@ export const mentors: Mentor[] = [
     rating: 4.8,
     totalRatings: 42,
     avatar: "🧑‍💻",
+    profileImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face",
+    gender: "male",
     bio: "Cracked Google & Amazon interviews. Let me help you crack yours. 500+ LeetCode problems solved.",
     tags: ["DSA", "Competitive Coding", "Placement Prep"],
   },
@@ -36,6 +40,8 @@ export const mentors: Mentor[] = [
     rating: 4.6,
     totalRatings: 28,
     avatar: "👩‍🔬",
+    profileImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
+    gender: "female",
     bio: "Built 3 IoT projects that won national hackathons. Arduino, ESP32, Raspberry Pi — I speak their language.",
     tags: ["IoT", "Arduino", "Circuit Design"],
   },
@@ -49,6 +55,8 @@ export const mentors: Mentor[] = [
     rating: 4.9,
     totalRatings: 35,
     avatar: "🔧",
+    profileImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
+    gender: "male",
     bio: "Topped the department 3 semesters straight. I make thermo feel like a breeze (pun intended).",
     tags: ["Thermodynamics", "Fluid Mechanics", "GATE Prep"],
   },
@@ -62,6 +70,8 @@ export const mentors: Mentor[] = [
     rating: 4.7,
     totalRatings: 55,
     avatar: "💅",
+    profileImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
+    gender: "female",
     bio: "Full-stack developer with 2 internships. I'll teach you to build apps that actually look good.",
     tags: ["React", "Node.js", "Full Stack"],
   },
@@ -75,6 +85,8 @@ export const mentors: Mentor[] = [
     rating: 4.5,
     totalRatings: 20,
     avatar: "🏗️",
+    profileImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
+    gender: "male",
     bio: "Structures don't have to be stressful (another pun). Simplifying complex analysis one beam at a time.",
     tags: ["Structural Analysis", "AutoCAD", "GATE Prep"],
   },
@@ -88,6 +100,8 @@ export const mentors: Mentor[] = [
     rating: 4.9,
     totalRatings: 38,
     avatar: "🤖",
+    profileImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face",
+    gender: "female",
     bio: "Published 2 papers on NLP. Kaggle Expert. Let's make your ML projects go from 'meh' to 'woah'.",
     tags: ["ML", "Python", "Deep Learning"],
   },
@@ -108,4 +122,20 @@ export const floatingQuotes = [
   "NaN marks in NaN subjects 📊",
   "Professor: 'Any questions?' *everyone stares at ceiling*",
   "Google > Textbook. Always.",
+  "No cap, this assignment is mid 💀",
+  "Slay the exam or let it slay you 💅",
+  "POV: You're in class but your soul left 👻",
+  "Main character energy at the canteen 🎬",
+  "It's giving... academic weapon ⚔️",
+  "Bestie, the viva was NOT it 😭",
+  "Living rent free in the back bench 🪑",
+  "That's sus, prof... that's sus 🧐",
+  "Sigma grindset: Study at 3 AM, sleep in class 🗿",
+  "Fr fr this lab report bussin 📝",
+  "Understood the assignment (not literally) 🫡",
+  "Ate and left no crumbs in the presentation 🔥",
+  "Bro really said 'trust me bro' as a citation 💀",
+  "Rizz won't save your CGPA bestie 😏",
+  "Core memory: First day vs Last day energy 🎭",
+  "Delulu is NOT the solulu for exams 🤡",
 ];

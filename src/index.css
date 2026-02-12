@@ -4,48 +4,51 @@
 
 @layer base {
   :root {
-    --background: 40 30% 97%;
-    --foreground: 20 20% 12%;
+    --background: 240 15% 9%;
+    --foreground: 0 0% 95%;
 
-    --card: 40 25% 95%;
-    --card-foreground: 20 20% 12%;
+    --card: 240 12% 13%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 20% 12%;
+    --popover: 240 12% 13%;
+    --popover-foreground: 0 0% 95%;
 
     --primary: 15 90% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 340 75% 58%;
+    --secondary: 280 70% 60%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 35 25% 90%;
-    --muted-foreground: 20 10% 45%;
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 55%;
 
     --accent: 45 95% 55%;
-    --accent-foreground: 20 20% 12%;
+    --accent-foreground: 240 15% 9%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
     --ring: 15 90% 55%;
 
     --radius: 1rem;
 
-    --sidebar-background: 40 30% 97%;
-    --sidebar-foreground: 20 20% 12%;
+    --sidebar-background: 240 15% 9%;
+    --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 15 90% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 45 95% 55%;
-    --sidebar-accent-foreground: 20 20% 12%;
-    --sidebar-border: 30 20% 85%;
+    --sidebar-accent-foreground: 240 15% 9%;
+    --sidebar-border: 240 10% 20%;
     --sidebar-ring: 15 90% 55%;
 
     --mint: 160 60% 50%;
     --lavender: 270 60% 70%;
     --sky: 200 80% 60%;
+    --neon-pink: 330 85% 60%;
+    --neon-blue: 210 100% 60%;
+    --neon-green: 150 80% 50%;
   }
 
   .dark {
@@ -149,13 +152,39 @@
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(15, 15, 30, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(15 90% 55% / 0.5), 0 0 40px hsl(15 90% 55% / 0.2);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 20px hsl(280 70% 60% / 0.5), 0 0 40px hsl(280 70% 60% / 0.2);
+  }
+
+  .text-glow-accent {
+    text-shadow: 0 0 20px hsl(45 95% 55% / 0.5), 0 0 40px hsl(45 95% 55% / 0.2);
+  }
+
+  .neon-border {
+    border: 1px solid hsl(15 90% 55% / 0.3);
+    box-shadow: 0 0 15px hsl(15 90% 55% / 0.1), inset 0 0 15px hsl(15 90% 55% / 0.05);
+  }
+
+  .section-heading {
+    @apply font-marker text-3xl text-glow;
+    background: linear-gradient(135deg, hsl(15 90% 55%), hsl(45 95% 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .doodle-border {
-    border: 2px dashed hsl(20 20% 12% / 0.3);
+    border: 2px dashed hsl(0 0% 95% / 0.15);
     border-radius: 1rem;
   }
 
