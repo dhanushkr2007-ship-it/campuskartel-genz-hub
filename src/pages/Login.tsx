@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, ArrowRight, Sparkles } from "lucide-react";
-import doodleMascot from "@/assets/doodle-mascot.png";
+import appLogo from "@/assets/campus-kartel-logo.png";
 
 const loginSlangs = [
   "WiFi > Feelings 📶",
@@ -94,22 +94,17 @@ const Login = () => {
         className="relative z-10 w-full max-w-md mx-4"
       >
         <div className="bg-card rounded-3xl p-8 shadow-2xl neon-border">
-          {/* Logo & Mascot */}
-          <div className="flex items-center justify-center gap-3 mb-2">
+          {/* Logo */}
+          <div className="flex items-center justify-center mb-4">
             <motion.img
-              src={doodleMascot}
-              alt="CampusKartel mascot"
-              className="w-16 h-16"
+              src={appLogo}
+              alt="CampusKartel"
+              className="h-20"
               style={{ filter: "drop-shadow(0 0 10px hsl(15 90% 55% / 0.5))" }}
-              animate={{ rotate: [0, -5, 5, 0] }}
+              animate={{ scale: [1, 1.04, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
           </div>
-
-          <h1 className="text-4xl font-display font-bold text-center mb-1">
-            <span className="text-foreground">Campus</span>
-            <span className="text-gradient-primary text-glow">Kartel</span>
-          </h1>
           <p className="text-center text-muted-foreground font-body text-sm mb-6">
             Your campus. Your vibe. Your food. 🔥
           </p>
