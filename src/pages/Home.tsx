@@ -35,18 +35,19 @@ const Home = () => {
       <FloatingElements />
 
       {/* Header */}
-      <header className="sticky top-0 z-50 glass border-b border-border/50">
+      <header className="sticky top-0 z-50 glass">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <motion.img
               src={doodleMascot}
               alt="mascot"
               className="w-10 h-10"
+              style={{ filter: "drop-shadow(0 0 6px hsl(15 90% 55% / 0.5))" }}
               animate={{ rotate: [0, -5, 5, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             />
             <h1 className="text-xl font-display font-bold">
-              Campus<span className="text-gradient-primary">Kartel</span>
+              Campus<span className="text-gradient-primary text-glow">Kartel</span>
             </h1>
           </div>
 
@@ -63,7 +64,7 @@ const Home = () => {
       </header>
 
       {/* Tab Bar */}
-      <div className="sticky top-[61px] z-40 glass border-b border-border/50">
+      <div className="sticky top-[61px] z-40 glass">
         <div className="container mx-auto px-4">
           <div className="flex gap-1 py-2">
             {tabs.map((tab) => (
@@ -74,8 +75,8 @@ const Home = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-display font-semibold text-sm transition-all ${
                   activeTab === tab.id
-                    ? "gradient-primary text-primary-foreground shadow-lg"
-                    : "text-muted-foreground hover:bg-muted"
+                    ? "gradient-primary text-primary-foreground shadow-lg shadow-primary/20"
+                    : "text-muted-foreground hover:bg-muted/30"
                 }`}
               >
                 <span>{tab.emoji}</span>

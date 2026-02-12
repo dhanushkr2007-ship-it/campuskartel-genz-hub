@@ -55,6 +55,9 @@ export default {
         mint: "hsl(var(--mint))",
         lavender: "hsl(var(--lavender))",
         sky: "hsl(var(--sky))",
+        "neon-pink": "hsl(var(--neon-pink))",
+        "neon-blue": "hsl(var(--neon-blue))",
+        "neon-green": "hsl(var(--neon-green))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
