@@ -15,6 +15,7 @@ const FoodSection = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [showCart, setShowCart] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
+  const [orderType, setOrderType] = useState<"preorder" | "delivery" | null>(null);
 
   const addToCart = (item: MenuItem, cafeName: string) => {
     setCart((prev) => {
@@ -39,7 +40,22 @@ const FoodSection = () => {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   const placeOrder = () => {
-    setShowLocation(true);
+    if (!orderType) {
+      toast.error("Please select Pre Order or Delivery!");
+      return;
+    }
+    if (orderType === "delivery") {
+      setShowLocation(true);
+    } else {
+      confirmPreOrder();
+    }
+  };
+
+  const confirmPreOrder = () => {
+    toast.success("Pre-order placed! 🎉 The restaurant has been notified. Skip the queue when you arrive!");
+    setCart([]);
+    setShowCart(false);
+    setOrderType(null);
   };
 
   const confirmOrder = () => {
@@ -47,6 +63,7 @@ const FoodSection = () => {
     setCart([]);
     setShowCart(false);
     setShowLocation(false);
+    setOrderType(null);
   };
 
   const activeCafe = cafes.find((c) => c.id === selectedCafe);
@@ -220,13 +237,52 @@ const FoodSection = () => {
                 </div>
               </div>
 
+              {/* Order Type Selection */}
+              <div className="mb-4">
+                <p className="font-display font-semibold text-sm text-foreground mb-3">How would you like your order?</p>
+                <div className="grid grid-cols-2 gap-3">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => setOrderType("preorder")}
+                    className={`p-4 rounded-2xl border-2 transition-all text-left ${
+                      orderType === "preorder"
+                        ? "border-primary bg-primary/10 shadow-md shadow-primary/10"
+                        : "border-border bg-muted/20 hover:border-muted-foreground/30"
+                    }`}
+                  >
+                    <span className="text-2xl block mb-1">⏩</span>
+                    <span className="font-display font-bold text-sm text-foreground block">Pre Order</span>
+                    <span className="text-xs text-muted-foreground font-body">Skip the queue!</span>
+                  </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => setOrderType("delivery")}
+                    className={`p-4 rounded-2xl border-2 transition-all text-left ${
+                      orderType === "delivery"
+                        ? "border-accent bg-accent/10 shadow-md shadow-accent/10"
+                        : "border-border bg-muted/20 hover:border-muted-foreground/30"
+                    }`}
+                  >
+                    <span className="text-2xl block mb-1">🛵</span>
+                    <span className="font-display font-bold text-sm text-foreground block">Delivery</span>
+                    <span className="text-xs text-muted-foreground font-body">To your location</span>
+                  </motion.button>
+                </div>
+              </div>
+
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={placeOrder}
-                className="w-full py-4 rounded-2xl gradient-accent text-accent-foreground font-display font-bold text-lg shadow-lg shadow-accent/20 flex items-center justify-center gap-2"
+                className={`w-full py-4 rounded-2xl font-display font-bold text-lg shadow-lg flex items-center justify-center gap-2 ${
+                  orderType
+                    ? "gradient-accent text-accent-foreground shadow-accent/20"
+                    : "bg-muted text-muted-foreground cursor-not-allowed"
+                }`}
               >
-                <MapPin className="w-5 h-5" /> Place Order
+                {orderType === "preorder" ? "⏩ Confirm Pre Order" : orderType === "delivery" ? <><MapPin className="w-5 h-5" /> Place Order</> : "Select order type"}
               </motion.button>
             </motion.div>
           </motion.div>

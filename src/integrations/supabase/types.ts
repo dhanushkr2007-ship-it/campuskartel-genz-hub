@@ -64,7 +64,7 @@ export type Database = {
           avatar_url?: string | null
           balance?: number | null
           full_name?: string | null
-          id: string
+          id?: string
           is_online?: boolean | null
           updated_at?: string | null
           user_type?: string | null
