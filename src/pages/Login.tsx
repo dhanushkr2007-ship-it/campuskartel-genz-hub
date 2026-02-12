@@ -100,7 +100,7 @@ const Login = () => {
               src={appLogo}
               alt="CampusKartel"
               className="h-20"
-              style={{ filter: "drop-shadow(0 0 10px hsl(15 90% 55% / 0.5))" }}
+              style={{ filter: "drop-shadow(0 0 6px hsl(15 90% 55% / 0.15))", opacity: 0.85 }}
               animate={{ scale: [1, 1.04, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
