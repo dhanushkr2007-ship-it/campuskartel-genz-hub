@@ -1,73 +1,25 @@
-# Welcome to your Lovable project
+🚩 DSU Connect
+The Hyper-Local Micro-Economy for Dayananda Sagar University.
 
-## Project info
+DSU Connect is a community-driven web platform designed to solve two problems at once: the need for fast on-campus deliveries and the desire for students to earn money in their free time through peer-to-peer services.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🚀 The Vision
+Most campus delivery happens through unorganized WhatsApp groups. DSU Connect centralizes this into a real-time marketplace where juniors can request food or tutoring, and seniors can accept those tasks to earn rewards—keeping the campus economy circular and secure.
 
-## How can I edit this code?
+✨ Key Features
+Dual-Mode Interface: A seamless toggle to switch between User Mode (Ordering/Requesting) and Earner Mode (Accepting Tasks).
 
-There are several ways of editing your application.
+Campus Food Delivery: Real-time requests from DSU landmarks like the Main Canteen, Juice Center, and Dental Block.
 
-**Use Lovable**
+Peer-to-Peer Tutoring: Seniors can monetize their academic expertise by helping juniors with subjects like C-Programming or Linear Algebra.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Live Dashboard: Earners can track their total balance and active tasks in a minimalist, gritty dashboard.
 
-Changes made via Lovable will be committed automatically to this repo.
+Supabase Integration: Secure authentication and real-time database updates for task status.
 
-**Use your preferred IDE**
+🛠️ Tech Stack
+Frontend: React / Vite (Lovable. ai and google ai studio)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Styling: Tailwind CSS (Custom Emerald Green & Gritty Minimalist theme)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Backend & Auth: Supabase (PostgreSQL)
