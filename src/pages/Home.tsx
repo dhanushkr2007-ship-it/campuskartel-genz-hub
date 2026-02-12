@@ -41,11 +41,15 @@ const Home = () => {
             <motion.img
               src={appLogo}
               alt="CampusKartel"
-              className="h-9"
+              className="h-11"
               style={{ filter: "drop-shadow(0 0 4px hsl(15 90% 55% / 0.2))", opacity: 0.85 }}
               animate={{ scale: [1, 1.03, 1] }}
               transition={{ duration: 3, repeat: Infinity }}
             />
+            <span className="font-display font-bold text-base">
+              <span className="text-muted-foreground">DSU </span>
+              <span className="text-gradient-primary">CampusKartel</span>
+            </span>
           </div>
 
           <motion.button

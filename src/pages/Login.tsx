@@ -95,15 +95,19 @@ const Login = () => {
       >
         <div className="bg-card rounded-3xl p-8 shadow-2xl neon-border">
           {/* Logo */}
-          <div className="flex items-center justify-center mb-4">
+          <div className="flex flex-col items-center justify-center mb-4">
             <motion.img
               src={appLogo}
               alt="CampusKartel"
-              className="h-20"
+              className="h-32"
               style={{ filter: "drop-shadow(0 0 6px hsl(15 90% 55% / 0.15))", opacity: 0.85 }}
               animate={{ scale: [1, 1.04, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
+            <h1 className="text-2xl font-display font-bold mt-2">
+              <span className="text-muted-foreground">DSU </span>
+              <span className="text-gradient-primary text-glow">CampusKartel</span>
+            </h1>
           </div>
           <p className="text-center text-muted-foreground font-body text-sm mb-6">
             Your campus. Your vibe. Your food. 🔥
