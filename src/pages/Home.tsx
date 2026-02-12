@@ -6,6 +6,7 @@ import FoodSection from "@/components/FoodSection";
 import CommunitySection from "@/components/CommunitySection";
 import MentoringSection from "@/components/MentoringSection";
 import FloatingElements from "@/components/FloatingElements";
+import MarqueeTicker from "@/components/MarqueeTicker";
 import appLogo from "@/assets/campus-kartel-logo.png";
 
 type Tab = "food" | "community" | "mentoring";
@@ -63,6 +64,9 @@ const Home = () => {
           </motion.button>
         </div>
       </header>
+
+      {/* Scrolling Ticker */}
+      <MarqueeTicker />
 
       {/* Tab Bar */}
       <div className="sticky top-[61px] z-40 glass">
