@@ -20,6 +20,6 @@ Supabase Integration: Secure authentication and real-time database updates for t
 🛠️ Tech Stack
 Frontend: React / Vite (Lovable. ai and google ai studio)
 
-Styling: Tailwind CSS (Custom Emerald Green & Gritty Minimalist theme)
+Styling: Tailwind CSS 
 
 Backend & Auth: Supabase (PostgreSQL)
