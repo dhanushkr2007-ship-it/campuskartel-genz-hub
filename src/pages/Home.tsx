@@ -6,7 +6,7 @@ import FoodSection from "@/components/FoodSection";
 import CommunitySection from "@/components/CommunitySection";
 import MentoringSection from "@/components/MentoringSection";
 import FloatingElements from "@/components/FloatingElements";
-import doodleMascot from "@/assets/doodle-mascot.png";
+import appLogo from "@/assets/campus-kartel-logo.png";
 
 type Tab = "food" | "community" | "mentoring";
 
@@ -39,16 +39,13 @@ const Home = () => {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <motion.img
-              src={doodleMascot}
-              alt="mascot"
-              className="w-10 h-10"
+              src={appLogo}
+              alt="CampusKartel"
+              className="h-9"
               style={{ filter: "drop-shadow(0 0 6px hsl(15 90% 55% / 0.5))" }}
-              animate={{ rotate: [0, -5, 5, 0] }}
+              animate={{ scale: [1, 1.03, 1] }}
               transition={{ duration: 3, repeat: Infinity }}
             />
-            <h1 className="text-xl font-display font-bold">
-              Campus<span className="text-gradient-primary text-glow">Kartel</span>
-            </h1>
           </div>
 
           <motion.button
